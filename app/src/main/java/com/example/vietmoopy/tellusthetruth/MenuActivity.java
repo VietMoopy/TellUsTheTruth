@@ -1,4 +1,4 @@
-package com.example.nicori.test_jeu_piece;
+package com.example.vietmoopy.tellusthetruth;
 
 import android.content.DialogInterface;
 import android.content.Intent;

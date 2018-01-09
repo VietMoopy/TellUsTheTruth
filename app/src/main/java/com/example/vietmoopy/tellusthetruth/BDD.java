@@ -1,5 +1,4 @@
-package com.example.nicori.test_jeu_piece;
-
+package com.example.vietmoopy.tellusthetruth;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;

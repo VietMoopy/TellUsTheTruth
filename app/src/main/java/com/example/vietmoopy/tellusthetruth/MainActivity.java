@@ -1,5 +1,4 @@
-package com.example.nicori.test_jeu_piece;
-
+package com.example.vietmoopy.tellusthetruth;
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
