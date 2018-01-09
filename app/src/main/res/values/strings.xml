@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">TellUsTheTruth</string>
+    <string name="app_name">Tell us the truth !</string>
+    <string name="tv_J1">Joueur 1 : </string>
+    <string name="tv_J2">Joueur 2 : </string>
+    <string name="tv_J3">Joueur 3 : </string>
+    <string name="b_roulette">Lancer la roulette</string>
+    <string name="b_show_question">Voir la question !</string>
+    <string name="tv_randomplayer">Nicolas</string>
+    <string name="Ok">Ok</string>
+    <string name="question">Qui est le plus beau ?</string>
+    <string name="alert_joueur">Il faut au moins 3 joueurs pour jouer</string>
+    <string name="alert_joueur_titre">Attention</string>
 </resources>

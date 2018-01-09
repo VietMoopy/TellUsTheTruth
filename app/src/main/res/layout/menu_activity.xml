@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_title_menu">
+
+    <ListView
+        android:id="@+id/playerlist"
+        android:layout_width="fill_parent"
+        android:layout_height="280dp"
+        android:layout_marginTop="150dp"
+        ></ListView>
+
+    <ImageButton
+        android:id="@+id/b_ajouterPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:layout_gravity="center"
+        android:layout_weight="2"
+        android:background="@color/cardview_shadow_end_color"
+        android:src="@drawable/bouton_ajouter" />
+
+    <Button
+        android:id="@+id/b_roulette"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:fontFamily="casual"
+        android:text="@string/b_roulette" />
+
+</LinearLayout>
