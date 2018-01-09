@@ -34,9 +34,9 @@ public class PlayerAdapter extends ArrayAdapter<Player> {
         TextView tvPlayer = (TextView) convertView.findViewById(R.id.tvPlayer);
         EditText etPlayer = (EditText) convertView.findViewById(R.id.etPlayer);
         // Populate the data into the template view using the data object
-        player.setName(String.valueOf(etPlayer.getText()));
-        tvPlayer.setText(player.playerNumber);
-        etPlayer.setText(player.name);
+        player.setName(String.valueOf(etPlayer.getText())); // Met le nom du joueur dans l'objet joueur pour pouvoir la récuperér
+        tvPlayer.setText(player.playerNumber); // Affiche le joueur nombre..
+        etPlayer.setText(player.name); // Affiche le nom du joueur
         // Return the completed view to render on screen
         return convertView;
     }

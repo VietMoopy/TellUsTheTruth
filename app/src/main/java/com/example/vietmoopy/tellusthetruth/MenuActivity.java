@@ -43,7 +43,9 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
 
         /******AFFECTATION DES VARIABLES******/
 
+        /** Création d'une alerte **/
         AlertDialog.Builder builder = new AlertDialog.Builder(MenuActivity.this);
+
 // Add the buttons
         builder.setPositiveButton(R.string.Ok, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
@@ -55,10 +57,8 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
                 .setTitle(R.string.alert_joueur_titre);
         warning = builder.create(); // Création du message d'alerte à afficher
 
+        /** Création d'une alerte **/
 
-//        nom_J1 = findViewById(R.id.Et_J1);
-//        nom_J2 = findViewById(R.id.Et_J2);
-//        nom_J3 = findViewById(R.id.Et_J3);
         b_roulette = findViewById(R.id.b_roulette);
         b_ajouterPlayer = findViewById(R.id.b_ajouterPlayer);
 
@@ -80,19 +80,15 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if(v == b_roulette) {
-//        ArrayList<String> List = new ArrayList<>();
-//        List.add(String.valueOf(nom_J1.getText()));
-//        List.add(String.valueOf(nom_J2.getText()));
-//        List.add(String.valueOf(nom_J3.getText()));
             compteurVraiJoueurs = 0;
-            MyApplication mApp = (MyApplication)getApplicationContext();
+            MyApplication mApp = (MyApplication)getApplicationContext(); // Récupère les données globales de l'application
             setPlayersList();
-            if(compteurVraiJoueurs >= 3) {
-                mApp.setPlayersList(playersList);
+            if(compteurVraiJoueurs >= 3) { // Si le nombre de joueur est supérieur à 3, le jeu se lance
+                mApp.setPlayersList(playersList); // Affecte la liste des joueurs à la variable globale afin d'y avoir tout le temps accès
                 Intent intent = new Intent(MenuActivity.this, RouletteActivity.class);
                 startActivity(intent);
             }
-            else { // Pas assez de joueur
+            else { // Pas assez de joueur, on affiche le warning
                 warning.show();
             }
         }
@@ -124,7 +120,7 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         adapter.add(tempPlayer);
         adapter.remove(tempPlayer);
         playersList = new ArrayList<Player>();
-        for(int i = 0; i < adapter.getCount(); i++) {
+        for(int i = 0; i < adapter.getCount(); i++) { // Parcours la liste des playersadapters pour compter le nombre de vrais joueurs
             System.out.println(adapter.getItem(i).getName() + "print");
             if(!adapter.getItem(i).getName().equals("")) { // Si le nom du joueur n'est pas vide alors
                 compteurVraiJoueurs++;
